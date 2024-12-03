@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)),
+        url(images/background.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu .navbar ul {
+    display: flex;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #fffdfc;
+    display: block;
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover {
+    color: #ce967b;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.header-content h2 {
+    font-size: 60px;
+    line-height: 80px;
+    color: #f9fafc;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.header-content p {
+    font-size: 16px;
+    color: #c5c5c5;
+    padding: 0 250px;
+    margin-bottom: 25px;
+}
+
+.header-content img {
+    width: 150px;
+    height: auto;
+}
+
+footer {
+    background-color: #0d0d0f;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-content p {
+    font-size: 16px;
+    margin: 5px;
+    color: white;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode a {
+    color: #bb86fc;
+}
+
+.dark-mode footer {
+    background-color: #1f1f1f;
+}
+
+/* Formulario de contacto */
+.form-contacto {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-contacto label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-contacto input::placeholder,
+.form-contacto textarea::placeholder {
+    color: #aaa;
+}
+
+.form-contacto button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    /* Ocultar el menú por defecto */
+    .menu .navbar ul {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        position: absolute;
+        top: 50px; /* Separación desde el top para no tapar el botón */
+        left: 0;
+        height: 100vh; /* Altura completa de la pantalla */
+        z-index: 999;
+    }
+
+    /* Mostrar el botón de hamburguesa */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Cuando se haga clic en el checkbox, mostrar el menú */
+    #menu-toggle:checked ~ .navbar ul {
+        display: flex;
+    }
+
+    .menu .navbar ul li {
+        text-align: center;
+        padding: 15px 0;
+        width: 100%;
+    }
+
+    .menu .navbar ul li a {
+        color: white;
+        font-size: 18px;
+    }
+
+    /* Ajustar el tamaño de las imágenes y textos */
+    .header-content h2 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .header-content p {
+        padding: 0 20px;
+        font-size: 14px;
+    }
+
+    .header-content img {
+        width: 100px;
+    }
+}
